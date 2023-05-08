@@ -1,0 +1,31 @@
+.container-form {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.form-heading {
+  text-align: center;
+  font-weight: 500;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+::ng-deep.select-field {
+  margin-top: 45px !important;
+}
+
+textarea {
+  resize: none;
+}
+
+::ng-deep.green-snackbar {
+  background: #29af18;
+  color: white;
+}
+::ng-deep.green-snackbar button {
+  background-color: #29af18;
+  color: white !important;
+  border: none;
+}
