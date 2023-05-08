@@ -1,0 +1,26 @@
+<nav>
+  <div class="nav">
+    <div class="nav__brand">
+      <p>Backoffice</p>
+    </div>
+    <div class="nav__menu">
+      <div class="menu-desktop">
+        <ul>
+          <li><a [routerLink]="['/employee/list']" routerLinkActive="active-link">Employee List</a></li>
+          <button mat-flat-button color="warn"
+            (click)="logout()"><mat-icon>logout</mat-icon><span>Logout</span></button>
+        </ul>
+      </div>
+      <div class="menu-mobile bar-icon" [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></div>
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item [routerLink]="['/employee/list']">Employee List</a>
+        <div class="text-center w-full">
+          <button mat-flat-button color="warn" (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            <span>Logout</span>
+          </button>
+        </div>
+      </mat-menu>
+    </div>
+  </div>
+</nav>
