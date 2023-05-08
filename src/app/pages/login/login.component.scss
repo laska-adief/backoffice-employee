@@ -6,12 +6,23 @@
   justify-content: center;
   align-items: center;
 
+  &__header-container {
+    position: relative;
+  }
+
   &__header {
     text-align: center;
     color: #0C134F;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 4px;
+  }
+
+  &__info {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    cursor: pointer;
   }
 
   &__form {
