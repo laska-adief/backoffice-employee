@@ -1,0 +1,49 @@
+<div class="employeee-detail">
+  <h1 class="heading">{{"Detail Employee"}}</h1>
+  <div class="card">
+    <div class="spinner-container" *ngIf="isWaitingForResponse">
+      <mat-spinner class="spinner"></mat-spinner>
+    </div>
+    <div class="grid" *ngIf="!isWaitingForResponse">
+      <div class="col-12 md:col-6">
+        <label>Username</label>
+        <h3>{{employeeData?.username}}</h3>
+      </div>
+      <div class="col-12 md:col-6">
+        <label>Email</label>
+        <h3>{{employeeData?.email}}</h3>
+      </div>
+      <div class="col-12 md:col-6">
+        <label>Firstname</label>
+        <h3>{{employeeData?.firstname}}</h3>
+      </div>
+      <div class="col-12 md:col-6">
+        <label>Lastname</label>
+        <h3>{{employeeData?.lastname}}</h3>
+      </div>
+      <div class="col-12 md:col-6">
+        <label>Birthdate</label>
+        <h3>{{employeeData?.birthDate | date:'fullDate'}}</h3>
+      </div>
+      <div class="col-12 md:col-6">
+        <label>Basic Salary</label>
+        <h3>{{employeeData?.basicSalary | currency:'Rp '}}</h3>
+      </div>
+      <div class="col-12 md:col-6">
+        <label>Status</label>
+        <h3>{{employeeData?.status}}</h3>
+      </div>
+      <div class="col-12 md:col-6">
+        <label>Group</label>
+        <h3>{{employeeData?.group}}</h3>
+      </div>
+      <div class="col-12">
+        <label>Description</label>
+        <h3>{{employeeData?.description}}</h3>
+      </div>
+      <div class="detail-button">
+        <button mat-flat-button color="primary" (click)="backToEmployeeList()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
