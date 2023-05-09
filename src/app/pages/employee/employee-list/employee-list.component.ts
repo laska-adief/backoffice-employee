@@ -190,6 +190,8 @@ export class EmployeeListComponent implements OnInit, AfterViewInit, OnDestroy {
       email: '',
     };
     this.dataSource.filter = JSON.stringify(this.filteredValues);
+    this.sort.direction = '';
+    this.sort.active = '';
     this.getEmployee();
   }
 
