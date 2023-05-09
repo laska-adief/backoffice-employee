@@ -82,21 +82,21 @@ export class EmployeeListComponent implements OnInit, AfterViewInit, OnDestroy {
       .pipe(debounceTime(300))
       .subscribe({
         next: (value) => {
-          this.filteredValues['firstname'] = value;
+          this.filteredValues['firstname'] = value.trim().toLowerCase();
           this.dataSource.filter = JSON.stringify(this.filteredValues);
         },
       });
 
     this.subs = this.lastnameFilter.valueChanges.subscribe({
       next: (value) => {
-        this.filteredValues['lastname'] = value;
+        this.filteredValues['lastname'] = value.trim().toLowerCase();
         this.dataSource.filter = JSON.stringify(this.filteredValues);
       },
     });
 
     this.subs = this.emailFilter.valueChanges.subscribe({
       next: (value) => {
-        this.filteredValues['email'] = value;
+        this.filteredValues['email'] = value.trim().toLowerCase();
         this.dataSource.filter = JSON.stringify(this.filteredValues);
       },
     });
