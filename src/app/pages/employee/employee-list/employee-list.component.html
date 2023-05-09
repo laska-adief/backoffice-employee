@@ -102,7 +102,7 @@
       <tr mat-header-row *matHeaderRowDef="displayedFilterColumns"></tr>
       <tr mat-header-row *matHeaderRowDef="['loading']" [hidden]="!isWaitingForResponse"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" [hidden]="isWaitingForResponse"></tr>
-      <tr class="mat-row" *matNoDataRow>
+      <tr class="mat-row" *matNoDataRow [hidden]="isWaitingForResponse">
         <td class="mat-cell" colspan="100%">No data to show</td>
       </tr>
     </table>
