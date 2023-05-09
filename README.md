@@ -10,7 +10,8 @@ DEMO : [Backoffice Employee](https://laska-adief.github.io/backoffice-employee/)
 
 ## Description 
 Employee management app with responsive design and using api [mockapi.io/employees](https://645866830c15cb14821d0079.mockapi.io/employees)
-Features : 
+
+### Features : 
 1. Login page 
    - For login use credential Username: admin | Password: admin
    - Set item 'token' with characters(Date.now()) in local storage 
